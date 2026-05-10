@@ -2,31 +2,102 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Audio Comparison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural Audio Codec Comparison</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 24px;
+      line-height: 1.5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f3f3f3;
+    }
+
+    audio {
+      width: 220px;
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
 
 <h1>Neural Audio Codec Comparison</h1>
 
-<h2>Sample 01</h2>
-
-<p>Original</p>
-<audio controls src="audio/log_sweep_20Hz_20kHz.wav"></audio>
-
-<p>DAC 8k</p>
-<audio controls src="audio/log_sweep_20Hz_20kHz_dac_8k.wav"></audio>
-
-<p>Opus 8k</p>
-<audio controls src="audio/log_sweep_20Hz_20kHz_opus_8k.wav"></audio>
-
-<p>Opus 16k</p>
-<audio controls src="audio/log_sweep_20Hz_20kHz_opus_16k.wav"></audio>
-
-<p>Opus 32k</p>
-<audio controls src="audio/log_sweep_20Hz_20kHz_opus_32k.wav"></audio>
-
-<p>Vorbis</p>
-<audio controls src="audio/log_sweep_20Hz_20kHz_vorbis_32k.wav"></audio>
+<table>
+  <thead>
+    <tr>
+      <th>Sample</th>
+      <th>Original</th>
+      <th>DAC 8k</th>
+      <th>Opus 8k</th>
+      <th>Opus 16k</th>
+      <th>Opus 32k</th>
+      <th>Vorbis 32k</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>スイープ音</td>
+      <td><audio controls src="audio/log_sweep_20Hz_20kHz.wav"></audio></td>
+      <td><audio controls src="audio/log_sweep_20Hz_20kHz_dac_8k.wav"></audio></td>
+      <td><audio controls src="audio/log_sweep_20Hz_20kHz_opus_8k.wav"></audio></td>
+      <td><audio controls src="audio/log_sweep_20Hz_20kHz_opus_16k.wav"></audio></td>
+      <td><audio controls src="audio/log_sweep_20Hz_20kHz_opus_32k.wav"></audio></td>
+      <td><audio controls src="audio/log_sweep_20Hz_20kHz_vorbis_32k.wav"></audio></td>
+    </tr>
+    <tr>
+      <td>bgmっぽい音</td>
+      <td><audio controls src="audio/105bpm.wav"></audio></td>
+      <td><audio controls src="audio/105bpm_dac_8k.wav"></audio></td>
+      <td><audio controls src="audio/105bpm_opus_8k.wav"></audio></td>
+      <td><audio controls src="audio/105bpm_opus_16k.wav"></audio></td>
+      <td><audio controls src="audio/105bpm_opus_32k.wav"></audio></td>
+      <td><audio controls src="audio/105bpm_vorbis_32k.wav"></audio></td>
+    </tr>
+    <tr>
+      <td>ドア</td>
+      <td><audio controls src="audio/20080505_1309unlock_doors.wav"></audio></td>
+      <td><audio controls src="audio/20080505_1309unlock_doors_dac_8k.wav"></audio></td>
+      <td><audio controls src="audio/20080505_1309unlock_doors_opus_8k.wav"></audio></td>
+      <td><audio controls src="audio/20080505_1309unlock_doors_opus_16k.wav"></audio></td>
+      <td><audio controls src="audio/20080505_1309unlock_doors_opus_32k.wav"></audio></td>
+      <td><audio controls src="audio/20080505_1309unlock_doors_vorbis_32k.wav"></audio></td>
+    </tr>
+    <tr>
+      <td>雨音</td>
+      <td><audio controls src="audio/20091225.rain.01.wav"></audio></td>
+      <td><audio controls src="audio/20091225.rain.01_dac_8k.wav"></audio></td>
+      <td><audio controls src="audio/20091225.rain.01_opus_8k.wav"></audio></td>
+      <td><audio controls src="audio/20091225.rain.01_opus_16k.wav"></audio></td>
+      <td><audio controls src="audio/20091225.rain.01_opus_32k.wav"></audio></td>
+      <td><audio controls src="audio/20091225.rain.01_vorbis_32k.wav"></audio></td>
+    </tr>
+    <tr>
+      <td>水流れる音</td>
+      <td><audio controls src="audio/20100320.fountain.wav"></audio></td>
+      <td><audio controls src="audio/20100320.fountain_dac_8k.wav"></audio></td>
+      <td><audio controls src="audio/20100320.fountain_opus_8k.wav"></audio></td>
+      <td><audio controls src="audio/20100320.fountain_opus_16k.wav"></audio></td>
+      <td><audio controls src="audio/20100320.fountain_opus_32k.wav"></audio></td>
+      <td><audio controls src="audio/20100320.fountain_vorbis_32k.wav"></audio></td>
+    </tr>
+  </tbody>
+</table>
 
 </body>
 </html>
